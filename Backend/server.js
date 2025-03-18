@@ -33,7 +33,7 @@ app.post('/api/scrape', async (req, res) => {
     res.json(results);
   } catch (error) {
     console.error('Scraping error:', error);
-    res.status(500).json({ error: 'Failed to scrape website: ' + error.message });
+    res.status(500).json({ error:error.message });
   }
 });
 

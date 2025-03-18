@@ -78,8 +78,7 @@ async function scrapeWebsite(url) {
       statusCode: response.status
     };
   } catch (error) {
-    console.error(`Error scraping ${url}:`, error.message);
-    throw new Error(`Failed to scrape website: ${error.message}`);
+    throw new Error(`Site scrapping is not allowed`);
   }
 }
 
