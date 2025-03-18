@@ -3,10 +3,13 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import Layout from "./components/Layout.jsx";
+import Layout from "./common/Layout.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home.jsx";
-import NotFound from "./components/NotFound.jsx";
+import NotFound from "./common/NotFound.jsx";
+import SEOAnalyzer from "./components/SEOAnalyzer.jsx";
+import CompetitorAnalysis from "./components/CompetitorAnalysis.jsx";
+import WebScraper from "./components/WebScraper.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,8 +21,16 @@ const router = createBrowserRouter([
        element: <Home/>
       },
       {
-        path: "/scraper",
-        element: <App/>,
+       path: "/scrape",
+       element: <WebScraper/>
+      },
+      {
+        path:"/seo",
+        element:<SEOAnalyzer />
+      },
+      {
+        path:"/competitor",
+        element:<CompetitorAnalysis />
       },
       {
         path: "*",
