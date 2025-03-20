@@ -13,7 +13,7 @@ passport.deserializeUser((user, done) => {
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: `${process.env.GOOGLE_CALLBACK_URL_BACKEND}/api/auth/google/callback`, // Use absolute URL
+    callbackURL: 'https://seo-audit-5voa.onrender.com/api/auth/google/callback',
     scope: ['profile', 'email']
   },
   async (accessToken, refreshToken, profile, done) => {
