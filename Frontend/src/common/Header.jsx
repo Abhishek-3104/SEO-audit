@@ -38,12 +38,12 @@
 //             </motion.div>
 //             <div>
 //               <Link to="/">
-//               <h1 className="text-white text-lg md:text-xl font-bold tracking-tight">
-//                 Scrape Genie
-//               </h1>
-//               <p className="text-gray-300 text-xs hidden md:block">
-//                 SEO Audit & Web Scraping Tool
-//               </p>
+//                 <h1 className="text-white text-lg md:text-xl font-bold tracking-tight">
+//                   Scrape Genie
+//                 </h1>
+//                 <p className="text-gray-300 text-xs hidden md:block">
+//                   SEO Audit & Web Scraping Tool
+//                 </p>
 //               </Link>
 //             </div>
 //           </motion.div>
@@ -61,28 +61,15 @@
 
 //           {/* Desktop Navigation */}
 //           <nav className="hidden md:flex items-center space-x-2">
-
 //             <motion.div
 //               whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
 //               whileTap={{ scale: 0.95 }}
 //             >
 //               <Link
-//                 to="/scraper"
+//                 to="/scrape"
 //                 className="text-white hover:text-gray-300 px-3 py-1.5 rounded-md text-sm font-medium flex items-center"
 //               >
-//                 <FaChartBar className="mr-1 text-xs" /> SEO Audit
-//               </Link>
-//             </motion.div>
-
-//             {/* <motion.div
-//               whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-//               whileTap={{ scale: 0.95 }}
-//             >
-//               <Link
-//                 to="/features"
-//                 className="text-white hover:text-gray-300 px-3 py-1.5 rounded-md text-sm font-medium flex items-center"
-//               >
-//                 <FaSearch className="mr-1 text-xs" /> Scraper
+//                 <FaSearch className="mr-1 text-xs" /> Web Scraper
 //               </Link>
 //             </motion.div>
 
@@ -91,21 +78,24 @@
 //               whileTap={{ scale: 0.95 }}
 //             >
 //               <Link
-//                 to="/about"
+//                 to="/seo"
 //                 className="text-white hover:text-gray-300 px-3 py-1.5 rounded-md text-sm font-medium flex items-center"
 //               >
-//                 <FaRobot className="mr-1 text-xs" /> About
+//                 <FaChartBar className="mr-1 text-xs" /> SEO Analysis
 //               </Link>
 //             </motion.div>
 
-//             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+//             <motion.div
+//               whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+//               whileTap={{ scale: 0.95 }}
+//             >
 //               <Link
-//                 to="/contact"
-//                 className="bg-white text-gray-800 hover:bg-gray-300 hover:text-gray-900 px-3 py-1.5 rounded-md text-sm font-medium transition-colors duration-300 shadow-md block"
+//                 to="/competitor"
+//                 className="text-white hover:text-gray-300 px-3 py-1.5 rounded-md text-sm font-medium flex items-center"
 //               >
-//                 Contact Us
+//                 <FaRobot className="mr-1 text-xs" /> Competitor Analysis
 //               </Link>
-//             </motion.div> */}
+//             </motion.div>
 //           </nav>
 //         </div>
 
@@ -120,37 +110,38 @@
 //               transition={{ duration: 0.3 }}
 //             >
 //               <div className="px-4 py-3 space-y-2">
-//                 <motion.a
-//                   href="#features"
-//                   className="text-white hover:text-gray-300 py-2 px-3 block rounded-md text-sm font-medium flex items-center"
-//                   whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-//                   whileTap={{ scale: 0.98 }}
-//                 >
-//                   <FaSearch className="mr-2" /> Scraper
-//                 </motion.a>
-//                 <motion.a
-//                   href="#seo"
-//                   className="text-white hover:text-gray-300 py-2 px-3 block rounded-md text-sm font-medium flex items-center"
-//                   whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-//                   whileTap={{ scale: 0.98 }}
-//                 >
-//                   <FaChartBar className="mr-2" /> SEO Audit
-//                 </motion.a>
-//                 <motion.a
-//                   href="#about"
-//                   className="text-white hover:text-gray-300 py-2 px-3 block rounded-md text-sm font-medium flex items-center"
-//                   whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-//                   whileTap={{ scale: 0.98 }}
-//                 >
-//                   <FaRobot className="mr-2" /> About
-//                 </motion.a>
-//                 <motion.button
-//                   className="bg-white text-gray-800 hover:bg-gray-300 hover:text-gray-900 py-2 px-3 w-full rounded-md text-sm font-medium transition-colors duration-300 flex justify-center items-center"
-//                   whileHover={{ scale: 1.02 }}
-//                   whileTap={{ scale: 0.98 }}
-//                 >
-//                   Contact Us
-//                 </motion.button>
+//                 <Link to="/">
+//                   <motion.div
+//                     className="text-white hover:text-gray-300 py-2 px-3 block rounded-md text-sm font-medium flex items-center"
+//                     whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+//                     whileTap={{ scale: 0.98 }}
+//                     onClick={() => setIsMenuOpen(false)}
+//                   >
+//                     <FaSearch className="mr-2" /> Web Scraper
+//                   </motion.div>
+//                 </Link>
+
+//                 <Link to="/seo">
+//                   <motion.div
+//                     className="text-white hover:text-gray-300 py-2 px-3 block rounded-md text-sm font-medium flex items-center"
+//                     whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+//                     whileTap={{ scale: 0.98 }}
+//                     onClick={() => setIsMenuOpen(false)}
+//                   >
+//                     <FaChartBar className="mr-2" /> SEO Analysis
+//                   </motion.div>
+//                 </Link>
+
+//                 <Link to="/competitor">
+//                   <motion.div
+//                     className="text-white hover:text-gray-300 py-2 px-3 block rounded-md text-sm font-medium flex items-center"
+//                     whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+//                     whileTap={{ scale: 0.98 }}
+//                     onClick={() => setIsMenuOpen(false)}
+//                   >
+//                     <FaRobot className="mr-2" /> Competitor Analysis
+//                   </motion.div>
+//                 </Link>
 //               </div>
 //             </motion.div>
 //           )}
@@ -170,8 +161,7 @@
 
 // export default Header;
 
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaSearch,
@@ -180,11 +170,54 @@ import {
   FaChartBar,
   FaBars,
   FaTimes,
+  FaGoogle,
+  FaUserCircle,
+  FaSignOutAlt,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [user, setUser] = useState(null);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const checkAuthStatus = async () => {
+    try {
+      const response = await axios.get(
+        `${import.meta.env.VITE_BACKEND_URL}/auth/status`,
+        { withCredentials: true }
+      );
+      if (response.data.isAuthenticated) {
+        setUser(response.data.user);
+      }
+    } catch (error) {
+      console.error("Auth check failed:", error);
+    }
+  };
+
+  useEffect(() => {
+    // Check if user is logged in
+    checkAuthStatus();
+  }, []);
+
+  const handleGoogleLogin = () => {
+    window.location.href = `${import.meta.env.VITE_BACKEND_URL}/auth/google`;
+  };
+
+  const handleLogout = async () => {
+    try {
+      await axios.get(`${import.meta.env.VITE_BACKEND_URL}/auth/logout`, {
+        withCredentials: true,
+      });
+      setUser(null);
+      setDropdownOpen(false);
+      navigate("/");
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
+  };
 
   return (
     <motion.header
@@ -222,7 +255,47 @@ const Header = () => {
           </motion.div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center">
+            {!user ? (
+              <motion.button
+                onClick={handleGoogleLogin}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="mr-3 bg-white text-gray-800 px-3 py-1 rounded-md text-sm font-medium flex items-center"
+              >
+                <FaGoogle className="mr-1" /> Login
+              </motion.button>
+            ) : (
+              <motion.div className="mr-3 relative" whileTap={{ scale: 0.95 }}>
+                <button
+                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                  className="flex items-center text-white"
+                >
+                  <FaUserCircle className="text-xl" />
+                </button>
+                <AnimatePresence>
+                  {dropdownOpen && (
+                    <motion.div
+                      className="absolute right-0 mt-2 w-48 bg-gray-700 rounded-md shadow-lg py-1 z-50"
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <div className="px-4 py-2 text-sm text-gray-200 border-b border-gray-600">
+                        {user.displayName || user.email}
+                      </div>
+                      <button
+                        onClick={handleLogout}
+                        className="block w-full text-left px-4 py-2 text-sm text-gray-200 hover:bg-gray-600"
+                      >
+                        <FaSignOutAlt className="inline mr-2" /> Logout
+                      </button>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            )}
             <motion.button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               whileTap={{ scale: 0.95 }}
@@ -234,41 +307,87 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-2">
-            <motion.div
-              whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link
-                to="/scrape"
-                className="text-white hover:text-gray-300 px-3 py-1.5 rounded-md text-sm font-medium flex items-center"
-              >
-                <FaSearch className="mr-1 text-xs" /> Web Scraper
-              </Link>
-            </motion.div>
+            {user && (
+              <>
+                <motion.div
+                  whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link
+                    to="/scrape"
+                    className="text-white hover:text-gray-300 px-3 py-1.5 rounded-md text-sm font-medium flex items-center"
+                  >
+                    <FaSearch className="mr-1 text-xs" /> Web Scraper
+                  </Link>
+                </motion.div>
 
-            <motion.div
-              whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link
-                to="/seo"
-                className="text-white hover:text-gray-300 px-3 py-1.5 rounded-md text-sm font-medium flex items-center"
-              >
-                <FaChartBar className="mr-1 text-xs" /> SEO Analysis
-              </Link>
-            </motion.div>
+                <motion.div
+                  whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link
+                    to="/seo"
+                    className="text-white hover:text-gray-300 px-3 py-1.5 rounded-md text-sm font-medium flex items-center"
+                  >
+                    <FaChartBar className="mr-1 text-xs" /> SEO Analysis
+                  </Link>
+                </motion.div>
 
-            <motion.div
-              whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link
-                to="/competitor"
-                className="text-white hover:text-gray-300 px-3 py-1.5 rounded-md text-sm font-medium flex items-center"
+                <motion.div
+                  whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link
+                    to="/competitor"
+                    className="text-white hover:text-gray-300 px-3 py-1.5 rounded-md text-sm font-medium flex items-center"
+                  >
+                    <FaRobot className="mr-1 text-xs" /> Competitor Analysis
+                  </Link>
+                </motion.div>
+              </>
+            )}
+
+            {!user ? (
+              <motion.button
+                onClick={handleGoogleLogin}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-white text-gray-800 px-4 py-1.5 rounded-md text-sm font-medium flex items-center ml-4"
               >
-                <FaRobot className="mr-1 text-xs" /> Competitor Analysis
-              </Link>
-            </motion.div>
+                <FaGoogle className="mr-2" /> Login with Google
+              </motion.button>
+            ) : (
+              <motion.div className="relative ml-4" whileTap={{ scale: 0.98 }}>
+                <button
+                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                  className="flex items-center text-white bg-gray-700 px-3 py-1.5 rounded-md"
+                >
+                  <FaUserCircle className="mr-2" />
+                  <span className="mr-1">
+                    {user.displayName || user.email.split("@")[0]}
+                  </span>
+                </button>
+                <AnimatePresence>
+                  {dropdownOpen && (
+                    <motion.div
+                      className="absolute right-0 mt-2 w-48 bg-gray-700 rounded-md shadow-lg py-1 z-50"
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                    
+                      <button
+                        onClick={handleLogout}
+                        className="block w-full text-left px-4 py-2 text-sm text-gray-200 hover:bg-gray-600"
+                      >
+                        <FaSignOutAlt className="inline mr-2" /> Logout
+                      </button>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            )}
           </nav>
         </div>
 
@@ -283,38 +402,74 @@ const Header = () => {
               transition={{ duration: 0.3 }}
             >
               <div className="px-4 py-3 space-y-2">
-                <Link to="/">
+                {user ? (
+                  <>
+                    <Link to="/scrape">
+                      <motion.div
+                        className="text-white hover:text-gray-300 py-2 px-3 block rounded-md text-sm font-medium flex items-center"
+                        whileHover={{
+                          backgroundColor: "rgba(255, 255, 255, 0.1)",
+                        }}
+                        whileTap={{ scale: 0.98 }}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        <FaSearch className="mr-2" /> Web Scraper
+                      </motion.div>
+                    </Link>
+
+                    <Link to="/seo">
+                      <motion.div
+                        className="text-white hover:text-gray-300 py-2 px-3 block rounded-md text-sm font-medium flex items-center"
+                        whileHover={{
+                          backgroundColor: "rgba(255, 255, 255, 0.1)",
+                        }}
+                        whileTap={{ scale: 0.98 }}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        <FaChartBar className="mr-2" /> SEO Analysis
+                      </motion.div>
+                    </Link>
+
+                    <Link to="/competitor">
+                      <motion.div
+                        className="text-white hover:text-gray-300 py-2 px-3 block rounded-md text-sm font-medium flex items-center"
+                        whileHover={{
+                          backgroundColor: "rgba(255, 255, 255, 0.1)",
+                        }}
+                        whileTap={{ scale: 0.98 }}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        <FaRobot className="mr-2" /> Competitor Analysis
+                      </motion.div>
+                    </Link>
+
+                    <motion.div
+                      className="text-white hover:text-gray-300 py-2 px-3 block rounded-md text-sm font-medium flex items-center"
+                      whileHover={{
+                        backgroundColor: "rgba(255, 255, 255, 0.1)",
+                      }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() => {
+                        handleLogout();
+                        setIsMenuOpen(false);
+                      }}
+                    >
+                      <FaSignOutAlt className="mr-2" /> Logout
+                    </motion.div>
+                  </>
+                ) : (
                   <motion.div
-                    className="text-white hover:text-gray-300 py-2 px-3 block rounded-md text-sm font-medium flex items-center"
-                    whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                    className="text-white hover:text-gray-300 py-2 px-3 block rounded-md text-sm font-medium flex items-center justify-center bg-gray-700"
+                    whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}
                     whileTap={{ scale: 0.98 }}
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={() => {
+                      handleGoogleLogin();
+                      setIsMenuOpen(false);
+                    }}
                   >
-                    <FaSearch className="mr-2" /> Web Scraper
+                    <FaGoogle className="mr-2" /> Login with Google
                   </motion.div>
-                </Link>
-                
-                <Link to="/seo">
-                  <motion.div
-                    className="text-white hover:text-gray-300 py-2 px-3 block rounded-md text-sm font-medium flex items-center"
-                    whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-                    whileTap={{ scale: 0.98 }}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <FaChartBar className="mr-2" /> SEO Analysis
-                  </motion.div>
-                </Link>
-                
-                <Link to="/competitor">
-                  <motion.div
-                    className="text-white hover:text-gray-300 py-2 px-3 block rounded-md text-sm font-medium flex items-center"
-                    whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-                    whileTap={{ scale: 0.98 }}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <FaRobot className="mr-2" /> Competitor Analysis
-                  </motion.div>
-                </Link>
+                )}
               </div>
             </motion.div>
           )}
